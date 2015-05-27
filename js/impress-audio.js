@@ -22,7 +22,7 @@
 			} else {
 				isPlaying = false;
 			}
-			
+
 		}
 	});
 
@@ -32,10 +32,10 @@
 	};
 
 	impressObj.goto = function($el) {
-		if(isNaN($el)) {
+        if($el instanceof jQuery) {
 			impressGoto($el.parent().children().index($el), $el.data('transition-duration'));
 		} else {
-			impressGoto($el);			
+			impressGoto($el);
 		}
 	}
 
